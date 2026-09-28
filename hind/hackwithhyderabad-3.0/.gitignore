@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Env / secrets — NEVER commit keys
+.env
+
+# Hindsight local data
+.hindsight/
+*.pg0/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+git rm --cached hind/hackwithhyderabad-3.0/
