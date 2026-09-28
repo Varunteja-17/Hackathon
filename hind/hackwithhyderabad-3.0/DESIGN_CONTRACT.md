@@ -45,7 +45,7 @@ ownership below — do not touch another worker's files.
 - **B:** `storesage_app.py` shows StoreSage branding + Lakshmi story; toggle and
   "What the agent remembered" panel intact; `README.md` leads with StoreSage;
   `IDEAS.md` marks StoreSage ⭐ LOCKED, others "not pursued".
-- **C:** `content/storesage-article.md`, `content/storesage-social-posts.md`,
+- **C:** `content/article.md`, `content/storesage-social-posts.md`,
   `content/storesage-video-script.md` — all H-word-free (verify with grep); article has
   real code + before/after + exactly one honest limitation; video script has
   shots + voiceover + opening line "Meet Lakshmi…".

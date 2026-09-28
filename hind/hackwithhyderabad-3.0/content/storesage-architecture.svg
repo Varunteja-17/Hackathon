@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="title description">
+  <title id="title">StoreSage conversation and memory flow</title>
+  <desc id="description">A customer message enters the StoreSage agent. The agent recalls relevant history from a Hindsight memory bank, sends the question and recalled context to the language model, returns an answer, and retains the new exchange in the bank.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4c647f"/>
+    </marker>
+    <style>
+      .bg { fill: #f4f7fb; }
+      .card { fill: #ffffff; stroke: #c7d2e1; stroke-width: 2; rx: 18; }
+      .accent { fill: #e5f7f5; stroke: #51aaa3; }
+      .title { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #102a43; }
+      .sub { font: 15px 'Segoe UI', Arial, sans-serif; fill: #486581; }
+      .label { font: 700 13px 'Segoe UI', Arial, sans-serif; fill: #287c76; letter-spacing: .5px; }
+      .line { fill: none; stroke: #4c647f; stroke-width: 3; marker-end: url(#arrow); }
+      .loop { fill: none; stroke: #287c76; stroke-width: 3; stroke-dasharray: 8 6; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="440" rx="22"/>
+  <text x="40" y="48" class="title" font-size="25">StoreSage: recall before reply, retain after</text>
+  <text x="40" y="76" class="sub">The same agent loop runs with memory enabled or disabled.</text>
+
+  <rect class="card" x="40" y="155" width="180" height="112"/>
+  <text x="64" y="193" class="label">INPUT</text>
+  <text x="64" y="222" class="title">Customer</text>
+  <text x="64" y="247" class="sub">“Do you have atta?”</text>
+
+  <rect class="card accent" x="292" y="135" width="210" height="152"/>
+  <text x="316" y="174" class="label">ORCHESTRATION</text>
+  <text x="316" y="205" class="title">StoreSage Agent</text>
+  <text x="316" y="233" class="sub">recall → chat → retain</text>
+  <text x="316" y="259" class="sub">toggle can skip memory</text>
+
+  <rect class="card" x="610" y="105" width="300" height="130"/>
+  <text x="635" y="143" class="label">PERSISTENT MEMORY</text>
+  <text x="635" y="174" class="title">Hindsight bank</text>
+  <text x="635" y="202" class="sub">retain events · recall relevant items</text>
+
+  <rect class="card" x="610" y="282" width="300" height="100"/>
+  <text x="635" y="319" class="label">ANSWER GENERATION</text>
+  <text x="635" y="348" class="title">Stub or OpenAI-compatible LLM</text>
+  <text x="635" y="371" class="sub">question + recalled context → reply</text>
+
+  <path class="line" d="M220 211 H280"/>
+  <path class="line" d="M502 174 H598"/>
+  <text x="520" y="160" class="label">RECALL</text>
+  <path class="line" d="M610 215 C565 240 552 307 598 327"/>
+  <path class="line" d="M610 350 H522 C500 350 490 326 490 300"/>
+  <text x="516" y="373" class="label">REPLY</text>
+  <path class="loop" d="M502 245 C550 276 573 174 598 174"/>
+  <text x="520" y="261" class="label">RETAIN EXCHANGE</text>
+</svg>
